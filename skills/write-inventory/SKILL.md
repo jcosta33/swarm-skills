@@ -89,6 +89,6 @@ as a change plan built on guesses.
 ## Next
 
 The inventory feeds the change plan — Baseline cites it, preservation guarantees grow from its
-Observed behavior rows (`advanced/write-change-plan/SKILL.md`). If
+Observed behavior rows (`../write-change-plan/SKILL.md`, if installed). If
 mapping surfaced real violations worth recording in their own right, write the audit too
-(`advanced/write-audit/SKILL.md`).
+(`../write-audit/SKILL.md`, if installed).

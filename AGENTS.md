@@ -11,8 +11,12 @@ of changing it is planned and reviewed in the family workspace (the sibling
 - One skill per folder: `skills/<name>/SKILL.md`, plus `references/` only for
   material the skill itself instantiates (session frames, templates).
 - A skill is self-contained: it must read correctly with no other file from
-  this repo installed. Cross-references go to the Swarm repo by name ("the
-  Swarm repo's `docs/reference/checks.md`"), never by relative path.
+  this repo installed. Two reference conventions are allowed: a sibling skill
+  as `../<name>/SKILL.md` marked "if installed", and a kit template or
+  reference card by its workspace-root-relative path (`advanced/audit.md`,
+  `templates/spec.md` — these resolve in any Swarm-kit workspace). Anything
+  else goes to the Swarm repo by name ("the Swarm repo's
+  `docs/reference/checks.md`"), never by relative path.
 - Skills name abstract command slots (`cmdTest`, `cmdLint`, …) — never a
   concrete toolchain command; the consuming repo's `AGENTS.md` supplies those.
 - The frontmatter `description` is the trigger: it must say when to ALWAYS

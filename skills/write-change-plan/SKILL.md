@@ -24,7 +24,7 @@ schema-change. The kind lives on the plan; the task packets keep one shape regar
 
 ## Baseline and target come from the inventory
 
-The Baseline section cites the inventory (`advanced/write-inventory/SKILL.md`)
+The Baseline section cites the inventory (`../write-inventory/SKILL.md`, if installed)
 — it never re-derives the current state from memory. The Target state says what the code looks
 like after, _including what explicitly stays unchanged_. A reviewer who can't diff these two
 sections in their head can't judge the waves between them. No inventory yet and the work is a

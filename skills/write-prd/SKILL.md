@@ -89,4 +89,4 @@ eventual spec is who benefits.
 When the intent is settled, write the spec from it (the `write-spec` guide in `.agents/skills/`,
 template at `templates/spec.md`) and list this PRD in the
 spec's `sources:`. If the _approach_ is still contested, an RFC comes between the two — see
-`advanced/write-rfc/SKILL.md`.
+`../write-rfc/SKILL.md` (if installed).

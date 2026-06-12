@@ -28,7 +28,7 @@ them automatically.
 Investigate one question in depth against primary sources. Keep observation distinct from claim,
 keep your confidence honest, and refuse to let the inquiry harden into a decision. For a
 breadth survey instead — what prevails across many products, patterns, or users — also load
-`advanced/persona-surveyor/SKILL.md`; it carries the extra rules breadth needs.
+`../persona-surveyor/SKILL.md` (if installed); it carries the extra rules breadth needs.
 
 ## Rules
 
