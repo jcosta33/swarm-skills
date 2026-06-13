@@ -1,5 +1,6 @@
 ---
 name: empirical-proof
+type: agent-guide
 description: Back every claim with verbatim pasted output. ALWAYS apply this skill on any task that writes code, runs validations, runs benchmarks, or makes verifiable claims about behaviour — every claim in `## Self-review` gets its own pasted command output. Do not paraphrase results, summarise with "✅ all passing", or trust upstream pasted output (re-run yourself when reviewing). Skip this skill only for tasks with no verifiable claims (rare for product-development work; surface as a blocker if you suspect this applies).
 ---
 

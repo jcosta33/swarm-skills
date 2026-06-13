@@ -109,7 +109,7 @@ flowchart LR
 - The body is sized for the U-curve: short enough that nothing important sits in the middle's attention trough.
 - `references/` files are kept one hop away so the on-demand load is reliable.
 
-The persona discipline is the canonical example: each `persona-<name>/SKILL.md` is its own ~60–70-line file. Only the persona that the agent actually adopts loads — total context cost is *lower* than a single monolithic personas index would have been.
+The persona discipline is the canonical example: each `persona-<name>/SKILL.md` is its own self-contained file (~115–135 lines, well under the 200-line target). Only the persona that the agent actually adopts loads — total context cost is *lower* than a single monolithic personas index would have been.
 
 ---
 

@@ -71,7 +71,7 @@ reviewer can see it.
 | [`write-spec`](https://github.com/jcosta33/swarm-starter-kit/blob/main/.agents/skills/write-spec/SKILL.md) (starter kit) | Every requirement carries a `Verify with:` line; the open-question list is output before delivery. | Open-spec questions slipping into implementation. |
 | [`write-audit`](https://github.com/jcosta33/swarm-starter-kit/blob/main/.agents/skills/write-audit/SKILL.md) (starter kit) | Every observation cites `path:line` or pasted output, carries a severity, and every risk names its firing condition — the Before-you-finish checklist holds the audit until each box is checked. | Findings that are observations dressed up as actions, with no anchor in the code. |
 | [`write-bug-report`](https://github.com/jcosta33/swarm-starter-kit/blob/main/.agents/skills/write-bug-report/SKILL.md) (starter kit) | The failing reproduction output is pasted verbatim before the report is final. | Bug reports asserting "the bug fires" without proof. |
-| [`distillation-discipline`](https://github.com/Frontify/skills) rule 4 (upstream library) | A four-test result table is written into the deliverable. | Distillation collapsing into paraphrase without measurable compression. |
+| [`fix-flaky-test`](../skills/fix-flaky-test/SKILL.md) | The reproduction loop's pass/fail tally is pasted before the diagnosis and again after the fix. | A flaky test silently "stabilised" by loosening its assertion rather than fixing the cause. |
 
 The pattern generalises: *if the rule's compliance is otherwise invisible, force it to produce a marker the next agent or human can see.*
 

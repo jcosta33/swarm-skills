@@ -63,7 +63,7 @@ flowchart TD
 
 | Property | How it's enforced |
 | --- | --- |
-| **Each persona is a separate skill folder** | `skills/persona-auditor/SKILL.md`, `skills/persona-skeptic/SKILL.md`, … one folder per persona, each ~60–70 lines. |
+| **Each persona is a separate skill folder** | `skills/persona-auditor/SKILL.md`, `skills/persona-skeptic/SKILL.md`, … one folder per persona, each ~115–135 lines. |
 | **Each persona activates from task assessment, not from cross-skill mention** | Each `description` names the task type the persona is for, e.g. *"ALWAYS apply this skill when authoring an audit of present state"*. The agent loads the persona because the task matches, not because another skill mentioned it. |
 | **No persona index / core / loader skill** | There is no `personas-core`, no `personas` monolith. Each persona is independently installable. |
 | **Personas are not referenced from any other skill** | `Grep` over `skills/` for `persona-` returns zero hits inside non-persona `SKILL.md` files and zero hits inside any `references/task-template.md`. The only matches are within the persona files themselves, where "personas" appears as a concept word ("do not blend personas"). |
