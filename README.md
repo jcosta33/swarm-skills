@@ -28,6 +28,25 @@ No CLI? Copy the folder: `cp -R skills/persona-skeptic <your-repo>/.agents/skill
 
 Skills name abstract command slots — `cmdTest`, `cmdLint`, `cmdTypecheck`, `cmdValidate` — never concrete commands. The consuming repo's `AGENTS.md` Commands table supplies the implementations. That split is what makes a skill portable: the guide carries the discipline, your repo carries the toolchain. An empty slot means **ask** — a skill never invents a command. The [Swarm starter kit](https://github.com/jcosta33/swarm-starter-kit) sets this contract up for you.
 
+## Where to start
+
+You don't need any of these to run Swarm — the [starter kit](https://github.com/jcosta33/swarm-starter-kit)
+already ships the core loop. Add skills only as a specific need shows up, in roughly this order:
+
+1. **Nothing.** Run the loop with the kit's core guides. Most changes never need more.
+2. **`persona-skeptic`** — the first one most teams want. Load it when an agent *judges another
+   agent's* completion claims, so the review refutes by default and re-runs the checks rather than
+   trusting them.
+3. **`empirical-proof`** — pair it with any completion claim to force verbatim pasted output; the
+   fastest cure for "done" that was never actually checked.
+4. **A code-authoring guide** matching the change shape — `write-fix` for a reproduced defect,
+   `write-refactor` for behavior-pinned restructuring, `write-migration` for an A→B move. Install
+   the one the task calls for, not the set.
+5. **A `persona-*` stance** when the *kind of thinking* matters more than the procedure —
+   `persona-architect` while shaping a spec, `persona-auditor` while mapping a brownfield codebase.
+
+Rule of thumb: install the fewest skills that name the discipline your current task is missing.
+
 ## Catalog
 
 ### Conditioning (stances)
