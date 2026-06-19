@@ -32,25 +32,26 @@ into a recommendation no spec could transcribe.
 
 ## Default questions
 
-- For each "most apps do this" / "common practice" / "well-known pattern" claim: do I have at
-  least three concrete, named instances, or am I generalizing from one? (One example is an
-  anecdote; "prevails" needs a defensible witness count.)
-- Is this an _observation_ (what a product does, what a study found) or a _claim_ (what someone
-  asserts users want)? Have I kept the two apart? ("What users do" and "what users want" are
-  different facts; collapsing them launders a guess into a finding.)
-- For each user-expectation claim: which research produced it, and would a reader reach it from
-  that research alone — or is it intuition wearing a citation's clothes? (If no research exists,
-  the honest output is "recommend running it.")
-- Where competitors disagree, have I compared the approaches explicitly and stated which to
-  follow and why — rather than silently picking the convenient one? (A survey that hides the
-  disagreement hides the actual decision the reader needs.)
-- Did I establish each product-behavior claim by interacting with the working product, or infer
-  it from a landing page, screenshot, or feature list? (Marketing describes the aspiration; the
-  product reveals the behavior, and they diverge.)
-- Am I about to _recommend a decision and bind it_? A survey surfaces options and trade-offs;
-  the commitment happens later, when the survey is lifted into a spec.
-- Does my closing recommendation name a behavior concrete enough for an implementer to build
-  to — or is it advice too vague to transcribe?
+1. **Three instances or one?** For each "most apps do this" / "common practice" / "well-known
+   pattern" claim, do I have at least three concrete, named instances, or am I generalizing from
+   one? _Why:_ one example is an anecdote; "prevails" needs a defensible witness count.
+2. **Observation or claim?** Is this an _observation_ (what a product does, what a study found) or a
+   _claim_ (what someone asserts users want), and have I kept the two apart? _Why:_ "what users do"
+   and "what users want" are different facts; collapsing them launders a guess into a finding.
+3. **Research or intuition?** For each user-expectation claim, which research produced it, and would
+   a reader reach it from that research alone? _Why:_ if no research exists, the honest output is
+   "recommend running it," not an assertion wearing a citation's clothes.
+4. **Stated the disagreement?** Where competitors disagree, have I compared the approaches
+   explicitly and said which to follow and why, rather than silently picking the convenient one?
+   _Why:_ a survey that hides the disagreement hides the actual decision the reader needs.
+5. **Product or marketing?** Did I establish each product-behavior claim by interacting with the
+   working product, or infer it from a landing page, screenshot, or feature list? _Why:_ marketing
+   describes the aspiration; the product reveals the behavior, and they diverge.
+6. **About to bind a decision?** A survey surfaces options and trade-offs; am I closing on a
+   recommendation worded as a commitment? _Why:_ the commitment happens later, when the survey is
+   lifted into a spec.
+7. **Concrete enough to transcribe?** Does my closing recommendation name a behavior an implementer
+   could build to? _Why:_ advice too vague to transcribe into a spec does no work.
 
 ## Required evidence
 
@@ -82,7 +83,7 @@ into a recommendation no spec could transcribe.
 | A claim with no citation, or cited to a source that cannot be checked | Reject; cite a checkable source or mark it `[unconfirmed]`                              |
 | A source or config file edited "to see how the competitor behaves"    | Reject; revert — the survey session is read-only on code                                |
 
-## Before you finish
+## Self-review delta
 
 With this stance active, additionally check:
 

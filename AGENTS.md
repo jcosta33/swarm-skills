@@ -24,9 +24,12 @@ The rationale and evidence for each rule live in `docs/` (the rule names its pag
   step that only asks the agent to "verify" gets silently skipped.
 - **Self-containment** (`docs/self-containment.md`): a skill must read
   correctly with no other file from this repo installed. Restate a load-bearing
-  sibling rule inline; a sibling may be mentioned only as `../<name>/SKILL.md`
-  with an explicit "if installed" marker. Kit templates and reference cards are
-  referenced by their workspace-root-relative path (`advanced/audit.md`,
+  sibling rule inline; point at a sibling that *carries* a discipline only as
+  `../<name>/SKILL.md` with an explicit "if installed" marker. A plain mention
+  that merely sends a different task elsewhere (`load fix-flaky-test, not this`)
+  carries no dependency and needs no marker — the test is whether the skill
+  still works when the named guide is absent. Kit templates and reference cards
+  are referenced by their workspace-root-relative path (`advanced/audit.md`,
   `templates/spec.md` — these resolve in any Swarm-kit workspace). Anything
   else goes to the Swarm repo by name, never by relative path.
 - Skills name abstract command slots (`cmdTest`, `cmdLint`, `cmdValidate`, …) —

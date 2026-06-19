@@ -37,11 +37,17 @@ Anti-pattern catalogues converge on the same finding [\[6\]](./sources.md#6) —
 | [\[6\]](./sources.md#6) Skill anti-patterns | "Reference Illusion" — linking to skills/files that aren't guaranteed to be present. |
 
 **Applied in this repo:** [`AGENTS.md`](../AGENTS.md) carries the rule: a skill must read
-correctly with no other file from this repo installed. If a related discipline is load-bearing,
-restate the rule inline; a sibling may be *mentioned* only as `../<name>/SKILL.md` with an
-explicit "if installed" marker, so a missing sibling reads as an option, never a dead
-dependency. Unmarked cross-skill links exist only in the repo's *meta* docs (this `docs/`
-directory, `README.md`, `AGENTS.md`) — never inside a `SKILL.md` body.
+correctly with no other file from this repo installed. Two cases follow from that. A **load-bearing
+dependency** — a rule the skill needs to function — is restated inline, never linked; where a sibling
+is pointed at as the place that *carries* a discipline, the pointer takes the `../<name>/SKILL.md`
+form with an explicit "if installed" marker, so a missing sibling reads as an option, never a dead
+dependency. A **disambiguation mention** — naming a related guide only to send a different task
+elsewhere (`load fix-flaky-test, not this`) — may name the guide plainly, because it creates no
+dependency: the skill still works standalone whether or not that guide is present. The test is
+function, not syntax: if the skill breaks when the named guide is absent, it is a dependency and must
+be restated inline; if it only loses a signpost, the plain mention is fine. Load-bearing cross-skill
+*links* live only in the repo's *meta* docs (this `docs/` directory, `README.md`, `AGENTS.md`) —
+never inside a `SKILL.md` body.
 
 > A linked skill that isn't installed is a dead reference; an inline one-sentence restatement is robust.
 
@@ -116,6 +122,8 @@ Some skills reference values *outside* the standard contract — a benchmark com
 | **Forks are cheap** | A team can vendor a single skill into their own collection without porting an entire dependency graph. |
 
 The cost is restated rules. The same discipline (e.g. *paste the actual output, not a paraphrase*) appears in `empirical-proof`, in `write-feature`, in `write-fix`, etc. — usually as one or two inline sentences rather than a link. The duplication is deliberate, not a TODO.
+
+The densest cluster is the behavior-preserving-transformation rule family — the equivalence check that would fail on drift, the string-form deletion grep, and the shim with a removal criterion — shared by `write-refactor`, `write-rewrite`, and `write-migration`, each phrased for its own kind. A shared "core" skill is ruled out ([Scope](./scope.md)), so these three are kept in sync by reviewing them together whenever one's shared rule changes; the wording stays adapted per kind, but the rule must not drift apart in substance.
 
 ---
 
