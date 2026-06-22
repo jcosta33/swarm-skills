@@ -24,6 +24,10 @@ npx skills add jcosta33/swarm-skills --skill persona-skeptic -a claude-code
 
 No CLI? Copy the folder: `cp -R skills/persona-skeptic <your-repo>/.agents/skills/` (point your tool's skills directory at the same folder — e.g. a `.claude/skills` symlink).
 
+Pin to a tag or commit for stability and re-run to re-fetch. The catalog is
+[semver](https://semver.org)-versioned ([`VERSION`](./VERSION), [`CHANGELOG.md`](./CHANGELOG.md));
+watch the [releases](https://github.com/jcosta33/swarm-skills/releases) and re-pull when a bump matters.
+
 ## The AGENTS.md contract
 
 Skills name abstract command slots — `cmdTest`, `cmdLint`, `cmdTypecheck`, `cmdValidate` — never concrete commands. The consuming repo's `AGENTS.md` Commands table supplies the implementations. That split is what makes a skill portable: the guide carries the discipline, your repo carries the toolchain. An empty slot means **ask** — a skill never invents a command. The [Swarm starter kit](https://github.com/jcosta33/swarm-starter-kit) sets this contract up for you.
