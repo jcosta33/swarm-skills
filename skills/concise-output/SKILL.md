@@ -9,7 +9,7 @@ description: Make agent output maximally readable and economical — signal-dens
 ## Purpose
 
 Verbose output costs reader attention and tokens — and long persuasive prose raises *trust* without
-raising *scrutiny* ([[OVERRELIANCE-REVIEW]]). This skill is the strong setting of the Corpus output-
+raising *scrutiny* ([\[52\]](../../docs/sources.md#52)). This skill is the strong setting of the Corpus output-
 economy convention ([ADR-0109]): emit the leanest output that still carries the full signal. It is a
 dial, not a hook — you apply it; nothing rewrites your output.
 
@@ -33,8 +33,8 @@ exact word (big, not extensive; fix, not implement-a-solution-for). Fragments ar
 ### 4. Reason free, emit lean
 
 Think in whatever form works; then emit the structured, compressed artifact. Format constraints belong
-on the *output*, never on the *reasoning* ([[FORMATFREE]] — format restriction during reasoning degrades
-it).
+on the *output*, never on the *reasoning* ([\[50\]](../../docs/sources.md#50) — format restriction
+during reasoning degrades it).
 
 ### 5. Clarity outranks brevity (the hard limit)
 

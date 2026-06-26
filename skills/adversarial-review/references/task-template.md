@@ -55,11 +55,12 @@ The shape of the change. Run `git diff --stat` and paste the output here. Then d
 
 Each finding cites file and line and states the issue specifically. Vague concerns are not findings.
 
-| # | Severity | File | Line | Issue | Fix sketch |
-| - | -------- | ---- | ---- | ----- | ---------- |
-|   |          |      |      |       |            |
+| # | Severity | File | Line | Issue | Evidence | FP-risk | Fix sketch |
+| - | -------- | ---- | ---- | ----- | -------- | ------- | ---------- |
+|   |          |      |      |       |          |         |            |
 
 Severity scale: `BLOCKER` (must fix before merge), `MAJOR` (should fix; merge blocked unless waived), `MINOR` (note for follow-up).
+Evidence = the diff line / re-run output / caller that proves it. FP-risk = high / medium / low — drop or down-rank a high-FP-risk flag rather than flooding noise.
 
 </findings>
 

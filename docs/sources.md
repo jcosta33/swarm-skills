@@ -81,6 +81,15 @@
 <a id="47"></a>
 **[47] Evaluating the accuracy of GPT-4o-generated citations in mental-health literature reviews.** _JMIR Mental Health_ 12:e80371, 2025. In a controlled experiment GPT-4o fabricated **19.9 %** of citations, and **45.4 %** of the real (non-fabricated) ones contained bibliographic errors (the figure is the paper's Results; its Discussion states the 54.6 % accurate complement); fabrication rose with topic obscurity (6 % for a high-visibility topic vs ~28–29 % for specialized ones, P=.001). The measured baseline that mandates quote-and-DOI verification, scaled to topic obscurity. <https://mental.jmir.org/2025/1/e80371>
 
+<a id="48"></a>
+**[48] Correlated Errors in Large Language Models.** Kim, Garg, Peng, Garg. **ICML 2025**, arXiv:2506.07962. Across 350+ models, models **agree ~60 % of the time when both are wrong**, and error-correlation persists across architectures/providers and *grows* with capability — an "algorithmic monoculture" that undermines majority voting, ensembling, and LLM-as-judge. <https://arxiv.org/abs/2506.07962>. Grounds: agreement is not a correctness signal — resolve reviewer disagreement by independent re-checking and voting, not by debate (which propagates the shared error).
+
+<a id="49"></a>
+**[49] The Impact of Code Review Coverage and Participation on Software Quality** (Qt, VTK, ITK). McIntosh, Kamei, Adams, Hassan. **MSR 2014**, DOI 10.1145/2597073.2597076. Coverage and participation each independently bear on quality: low coverage adds up to **two** post-release defects, low **participation up to five** — "coverage alone does not guarantee" quality. <https://doi.org/10.1145/2597073.2597076>. Grounds: substantive engagement (re-running the checks, reading the callers), not a sign-off, is what a review buys.
+
+<a id="50"></a>
+**[50] Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of LLMs.** Tam, Wu, Tsai, Lin, Lee, Chen. **EMNLP 2024 (Industry)**, arXiv:2408.02442. Format restriction **during reasoning degrades** it (JSON-mode worst on GSM8K); the same structure helps classification/extraction; parse-error rates ~0 %, so the loss is reasoning-order compression, not malformed output. <https://arxiv.org/abs/2408.02442>. Grounds: reason free-form, then emit the structured artifact — never constrain the reasoning to the output shape.
+
 ---
 
 ## Specifications and official guidance
@@ -133,6 +142,12 @@
 
 <a id="35"></a>
 **[35] Claude Code Skills Context Window Impact: How Many Is Too Many?** BSWEN, Mar 2026. Practitioner measurement of skill-count vs startup cost: each skill adds ~100 tokens of always-on metadata at session start; 45 skills consume ~4,500 tokens before the user prompt. Author's rule of thumb: **15 optimal · 20 good · 25 acceptable · 30 warning · 45+ problem**. The signal is that even disciplined directive descriptions cannot escape the eager-loading cost documented in [\[34\]](#34); selective install is the only consumer-side defence. <https://docs.bswen.com/blog/2026-03-28-claude-skills-context-window/>. _Secondary source_ — single-author measurement, not a controlled study.
+
+<a id="51"></a>
+**[51] Lessons from Building Static Analysis Tools at Google.** Sadowski, Aftandilian, Eagle, Miller-Cushon, Jaspan. **Communications of the ACM 61(4), 2018**, DOI 10.1145/3188720 (restated in *Software Engineering at Google*, ch. 20). A review-time check must produce **< 10 % effective false positives** — an "effective false positive" is one the developer takes no positive action on; technical correctness is secondary. <https://doi.org/10.1145/3188720>. _Authoritative engineering field report, not peer-reviewed primary research._ Grounds: a review finding carries a false-positive risk; a noisy reviewer gets ignored, so flag with a precision budget, not maximal recall.
+
+<a id="52"></a>
+**[52] Overreliance on AI: Literature Review.** Passi, Vorvoreanu, et al. **Microsoft Research / Aether, June 2022.** A research literature review (secondary synthesis): the **presence of explanations can increase over-reliance**, and **more detailed explanations can make it worse** — explanations often persuade rather than help a person evaluate. <https://www.microsoft.com/en-us/research/publication/overreliance-on-ai-literature-review/>. _Authoritative vendor research synthesis — guidance, not a single measured study._ Grounds: justify a finding to make checking cheap, not to convince; lead with evidence, keep the prose short.
 
 ---
 
