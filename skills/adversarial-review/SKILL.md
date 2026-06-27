@@ -29,12 +29,12 @@ notes** — it is the session frame; fill it in as you go rather than reconstruc
   security, migration-safety, performance, data-integrity, concurrency as the change warrants). The lead
   reconciles, dedupes, and writes the one report. Diverse lenses beat redundant reviewers because
   **agreement is not a correctness signal** — models err in correlated ways, and the correlation grows
-  with capability ([\[48\]](../../docs/sources.md#48)).
+  with capability.
 
 Two rules make a panel work:
 
 - **Draft before you compare.** Each lens drafts its findings _before_ seeing the others — independence
-  first, comparison second. Revealing early collapses the panel into one correlated opinion ([\[48\]](../../docs/sources.md#48)).
+  first, comparison second. Revealing early collapses the panel into one correlated opinion.
 - **Vote, don't debate; refute first.** Resolve a disagreement by each reviewer **independently
   re-checking** then **voting**, not by argument — debate propagates the shared error. On a contested
   finding the reviewer writes the **refutation first** (why the claim is unproven); it survives only if
@@ -61,7 +61,7 @@ do, you have not read enough to judge it.
 Run install / test / lint in **your own clean checkout**, the branch checked out. The author's pasted
 output is evidence they ran it _once_, not that it passes _now_ — it is the claim you are reviewing, not
 its proof. Re-running is the lever: substantive engagement, not a sign-off, is what makes review catch
-defects ([\[49\]](../../docs/sources.md#49)). Paste the output verbatim — last lines and exit status
+defects. Paste the output verbatim — last lines and exit status
 included. Re-run from a fresh checkout, not the author's already-built artifacts or shell state, or it
 "passes" for the wrong reason.
 
@@ -109,8 +109,8 @@ Accept a claim only when its evidence is in front of you:
 A finding is: **severity** (BLOCKER / MAJOR / MINOR) · **file:line** · **the specific issue** ·
 **the evidence** (the diff line, the re-run output, the caller) · **an FP-risk** (high / medium / low) ·
 **a fix sketch**. The FP-risk earns the finding its place: a reviewer who floods low-confidence flags
-gets tuned out, so a noisy finding is worse than silence — keep effective false positives low
-([\[51\]](../../docs/sources.md#51)). Vague concerns are not findings; sharpen to file:line or drop.
+gets tuned out, so a noisy finding is worse than silence — keep effective false positives low.
+Vague concerns are not findings; sharpen to file:line or drop.
 
 ### 7. Mistrust confident language; don't trust the diff to be the work
 
@@ -164,7 +164,7 @@ the verdict is about the _verdict_; it is not an excuse to skip attacking your o
 
 Lead with the finding and its evidence; file:line throughout; no soft language ("maybe consider possibly
 …"), no praise. Justify a finding to make the reader's check **cheap**, not to convince — long persuasive
-prose raises trust without raising scrutiny ([\[52\]](../../docs/sources.md#52)). Pairs with the
+prose raises trust without raising scrutiny. Pairs with the
 [`concise-output`](../concise-output/SKILL.md) skill.
 
 ## You don't own the ship decision
@@ -184,8 +184,8 @@ cannot be trusted to disagree with it (this is the boundary the self-review subs
 - **"I can't reproduce" treated as case closed.** The discrepancy is itself a finding to chase down, not
   a reason to dismiss the concern.
 - **Early reveal on a panel.** The three lenses share a thread before drafting, and all three anchor on
-  the first reviewer's framing — you get one opinion in triplicate, not three (the exact correlation
-  [\[48\]](../../docs/sources.md#48) warns of). Keep stage one private.
+  the first reviewer's framing — you get one opinion in triplicate, not three (the correlated-opinion
+  trap). Keep stage one private.
 - **Severity laundering.** A BLOCKER gets filed as MINOR to avoid blocking the author. Severity is the
   consequence if it ships, not the social cost of saying so.
 - **Diff tunnel vision.** You review only the changed lines; the defect is in an unchanged caller the

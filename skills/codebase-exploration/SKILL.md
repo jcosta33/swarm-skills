@@ -13,16 +13,13 @@ the hit, follow an import, read that, and keep going. By the time you understand
 layout, you have pulled twenty files of source into the one context that has to do the
 actual work, and your attention is spread across all of it. Long context degrades
 attention non-uniformly — relevant facts buried in the middle of a bloated window get
-missed even when they are present ([\[5\]](../../docs/sources.md#5),
-[\[30\]](../../docs/sources.md#30)).
+missed even when they are present.
 
 This skill changes that: **the orchestrator does not read source files to orient.** It
 delegates 2-4 narrow, read-only recon slices to subagents, gets back a compact
 **key-files map** (path → one-line role), and only then reads the handful of files that
 actually matter — in a context that is still mostly empty. The recon cost is paid in
-throwaway subagent contexts; the main context stays clean for the work
-(delegate-recon + key-files-map-first pattern from
-[oil-oil/codex-explore-skill](https://github.com/oil-oil/codex-explore-skill)).
+throwaway subagent contexts; the main context stays clean for the work.
 
 ## When to delegate vs. just look
 
@@ -83,9 +80,7 @@ A worked map:
 For a repo you'll revisit, write the key-files map plus per-directory one-line signatures
 to a small checked-in or local file (e.g. a structure-index note). The next session reads
 the index instead of re-running recon — a cold-start skip. Keep it short and **dated**, so
-a reader can tell whether it predates recent changes (persisted-structure-index pattern
-from
-[shannonbay/setup-structure-index](https://github.com/shannonbay/setup-structure-index)).
+a reader can tell whether it predates recent changes.
 
 ## Gotchas
 

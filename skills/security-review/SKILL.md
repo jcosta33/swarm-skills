@@ -18,22 +18,19 @@ failure modes show up when an agent does a security pass untuned:
 2. **False-positive flood.** The agent dumps every theoretical concern (missing input validation,
    "could be a DoS", open-redirect maybe, no rate limit) as if all were findings. A reviewer who floods
    low-confidence flags gets muted — a check that fires on noise has under ~10% effective value and
-   developers stop reading it (Google's static-analysis field report, Sadowski et al., CACM 2018,
-   <https://doi.org/10.1145/3188720>). At that point the security review is worse than none, because it
+   developers stop reading it. At that point the security review is worse than none, because it
    buries the one real flag.
 
-This skill replaces both with **semantic data-flow review** plus a **tunable false-positive filter** —
-the approach in `anthropics/claude-code-security-review`
-(<https://github.com/anthropics/claude-code-security-review>), which reviews the PR diff by reasoning
-about taint flow and then actively filters low-signal classes before reporting.
+This skill replaces both with **semantic data-flow review** plus a **tunable false-positive filter**:
+review the PR diff by reasoning about taint flow, then actively filter low-signal classes before
+reporting.
 
 ## When a scanner exists, drive it first
 
 Prose-only review misses flows; a static analyzer was built to follow them. Before reasoning by hand,
 check whether the repo already has **Semgrep** (`.semgrep.yml`, `semgrep.yml`, a `semgrep` CI step) or
-**CodeQL** (`.github/workflows/codeql*`, a `codeql` config) — the driving-real-scanners pattern from
-`raptor` (<https://github.com/gadievron/raptor>). If one is configured, run it against the change and
-reason about its output:
+**CodeQL** (`.github/workflows/codeql*`, a `codeql` config). If a scanner like Semgrep or CodeQL is
+configured, run it against the change and reason about its output:
 
 - A scanner **hit** is a lead, not a verdict — confirm reachability before you report it (see step 4).
 - A scanner **miss** is not absolution — the rules cover known patterns, not your specific logic. Hand
@@ -61,8 +58,7 @@ there no sanitizer between source and sink on *any* path?
 
 ### 3. Calibrate for the language in front of you
 
-Each stack has footguns a generic pass misses (per-language quirks, the approach in `agamm/claude-code-owasp`,
-<https://github.com/agamm/claude-code-owasp>). A few high-yield ones — the full table is in
+Each stack has footguns a generic pass misses. A few high-yield ones — the full table is in
 [`references/language-quirks.md`](./references/language-quirks.md):
 
 - **Python** — `pickle`/`yaml.load`/`eval` on untrusted data; `subprocess(..., shell=True)`.

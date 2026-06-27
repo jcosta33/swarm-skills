@@ -10,7 +10,7 @@ description: Make agent output maximally readable and economical — signal-dens
 
 A universal output-economy discipline: emit the leanest output that still carries the full signal.
 Verbose output costs reader attention and tokens — and long persuasive prose raises *trust* without
-raising *scrutiny* ([\[52\]](../../docs/sources.md#52)). This is a dial, not a hook — you apply it;
+raising *scrutiny*. This is a dial, not a hook — you apply it;
 nothing rewrites your output.
 
 ## Core rules
@@ -33,8 +33,7 @@ exact word (big, not extensive; fix, not implement-a-solution-for). Fragments ar
 ### 4. Reason free, emit lean
 
 Think in whatever form works; then emit the structured, compressed artifact. Format constraints belong
-on the *output*, never on the *reasoning* — format restriction during reasoning degrades it
-([\[50\]](../../docs/sources.md#50)).
+on the *output*, never on the *reasoning* — format restriction during reasoning degrades it.
 
 ### 5. Clarity outranks brevity (the hard limit)
 

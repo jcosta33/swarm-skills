@@ -1,8 +1,6 @@
 # Git worktrees for parallel branches
 
-Detail for the "Isolate parallel work in separate worktrees" stage of the `git-pr` skill. The
-worktree workflow here follows `using-git-worktrees` from
-[obra/superpowers](https://github.com/obra/superpowers).
+Detail for the "Isolate parallel work in separate worktrees" stage of the `git-pr` skill.
 
 ## Why a worktree instead of switching branches
 

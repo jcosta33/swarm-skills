@@ -17,10 +17,8 @@ You fix a symptom, the bug moves, and now you have two.
 This skill installs a **gate**: you do not commit to a root-cause conclusion, and you do not
 propose a fix, until **observed execution data localizes the cause to a line and a state**. A guess
 is a hypothesis to test against the running program, never a conclusion to act on. The discipline is
-the 4-phase systematic loop from obra/superpowers `systematic-debugging`
-(<https://github.com/obra/superpowers>), grounded in live runtime context as getsentry/skills
-argues (<https://github.com/getsentry/skills>). It works in any repo and any runtime; nothing
-enforces it at edit time, so you hold yourself to it.
+a 4-phase systematic loop — reproduce, isolate, identify, verify — grounded in live runtime evidence.
+It works in any repo and any runtime; nothing enforces it at edit time, so you hold yourself to it.
 
 If the cause is already proven to a line, you are past this skill — write the fix. If the failure
 is intermittent (green sometimes, red sometimes), that is non-determinism, a different discipline —

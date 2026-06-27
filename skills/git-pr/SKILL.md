@@ -17,9 +17,8 @@ re-run burns minutes and hides a real bug; parallel branches in one checkout ove
 work. This guide makes shipping a **disciplined lifecycle** — stage, commit, push, open, then close
 the loop on review and CI — so the change lands the way you meant it to.
 
-The ship loop here is the `yeet` pattern (stage → commit → push → PR), plus `gh-address-comments`
-and `gh-fix-ci`, from [openai/skills](https://github.com/openai/skills); the parallel-work isolation
-is `using-git-worktrees` from [obra/superpowers](https://github.com/obra/superpowers).
+The ship loop here is stage → commit → push → open a PR, plus address review comments and fix a failing
+CI job; the parallel-work isolation uses git worktrees.
 
 ## Resolve the repo's flow first
 

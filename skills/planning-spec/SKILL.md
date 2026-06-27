@@ -42,11 +42,10 @@ fresh for this change.
 
 Look for those principles where the project records them: an `AGENTS.md` / `CONTRIBUTING.md`, an
 architecture or decision-record directory (`docs/adr`, `decisions/`), a `CLAUDE.md`, or a stated set of
-conventions. The discipline of validating a plan against a project-level "constitution" of principles
-before writing it is the pipeline pattern from **github/spec-kit**
-(<https://github.com/github/spec-kit>): the plan is constrained by enduring rules, so it stays
-consistent with the rest of the codebase instead of reintroducing a pattern the project deliberately
-moved away from. If the project records no such principles, infer them from the prevailing structure —
+conventions. Validating a plan against the project's enduring principles before writing it keeps the
+plan constrained by those rules, so it stays consistent with the rest of the codebase instead of
+reintroducing a pattern the project deliberately moved away from. If the project records no such
+principles, infer them from the prevailing structure —
 and say which ones you inferred, so the human can correct you at the "go".
 
 ### 3. State what this will deliberately NOT do
@@ -54,15 +53,15 @@ and say which ones you inferred, so the human can correct you at the "go".
 Write the out-of-scope line explicitly: the adjacent things a reader might reasonably expect this change
 to cover, that it will *not*. Scope creep enters through the omission, not the inclusion — an
 unmentioned boundary is one the work silently crosses later. Naming the non-goals up front is the
-out-of-scope discipline from **get-shit-done** (<https://github.com/glittercowboy/get-shit-done>); it
-also gives the human something concrete to push back on ("no, the migration *should* be in scope") while
+out-of-scope discipline; it also gives the human something concrete to push back on ("no, the migration
+*should* be in scope") while
 the change is still a paragraph.
 
 ### 4. Stop for an explicit human "go"
 
 Present intent + approach + out-of-scope and **wait for explicit approval before breaking the plan into
-steps**. This human checkpoint between plan and breakdown is the gate from **ai-dev-tasks**
-(<https://github.com/snarktank/ai-dev-tasks>): the plan is the cheapest artifact to redirect, and once
+steps**. This human checkpoint between plan and breakdown is the gate: the plan is the cheapest artifact
+to redirect, and once
 it fans out into a task list with edits underway, every correction costs more. "Looks fine, proceed" is
 approval; silence is not. If you cannot get a human in the loop, say so and treat the plan as
 provisional rather than settled.

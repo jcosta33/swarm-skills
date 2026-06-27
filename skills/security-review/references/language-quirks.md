@@ -1,8 +1,8 @@
 # Per-language security footguns
 
 Pull this up for the languages the diff actually changes. Each stack has sinks and traps a generic pass
-misses — the per-language-quirks approach in `agamm/claude-code-owasp` (<https://github.com/agamm/claude-code-owasp>). For each
-row: when the diff touches that surface, trace the source→sink path (SKILL.md step 2) before you decide
+misses. For each row: when the diff touches that surface, trace the source→sink path (SKILL.md step 2)
+before you decide
 it's a finding, and run it through the false-positive filter (step 4) before you report it.
 
 ## Python
