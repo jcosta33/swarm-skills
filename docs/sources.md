@@ -1,6 +1,6 @@
 # Sources
 
-> **Every claim in this directory cites at least one entry below. A claim without a citation is opinion, not finding** — cribbed from the Corpus starter kit's [`write-research`](https://github.com/jcosta33/corpus-starter-kit/blob/main/.agents/skills/write-research/SKILL.md) guide. Where a primary source was unavailable, the most authoritative secondary source is cited and labelled.
+> **Every claim in this directory cites at least one entry below. A claim without a citation is opinion, not finding** — cribbed from the Suspec starter kit's [`write-research`](https://github.com/jcosta33/suspec-starter-kit/blob/main/.agents/skills/write-research/SKILL.md) guide. Where a primary source was unavailable, the most authoritative secondary source is cited and labelled.
 
 ---
 
@@ -110,7 +110,7 @@
 **[17] Extend Claude with skills.** Claude Code docs. Skill loading model in Claude Code specifically. <https://docs.anthropic.com/en/docs/claude-code/skills>
 
 <a id="19"></a>
-**[19] agents.md.** The open `AGENTS.md` convention adopted by Cursor, Codex, Claude Code, OpenCode, and others; basis for the [Corpus starter kit's](https://github.com/jcosta33/corpus-starter-kit/blob/main/AGENTS.md) `AGENTS.md` contract. <https://agents.md>
+**[19] agents.md.** The open `AGENTS.md` convention adopted by Cursor, Codex, Claude Code, OpenCode, and others; basis for the [Suspec starter kit's](https://github.com/jcosta33/suspec-starter-kit/blob/main/AGENTS.md) `AGENTS.md` contract. <https://agents.md>
 
 <a id="20"></a>
 **[20] Effective context engineering for AI agents.** Anthropic Engineering, Sep 29 2025. Official Anthropic guidance on context as a finite resource. Defines the **canonical three-file note-taking pattern**: `task_plan.md` for the plan, `progress_log.md` for the running session log, `decisions.md` for durable design choices. The discipline behind this repo's task-template sections. <https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents>
@@ -181,7 +181,7 @@
 <a id="best-of-breed-implementations"></a>
 
 The code-lifecycle skills are framework-free distillations of the strongest public implementation of each
-fundamental, identified by a live adoption census (GitHub `gh api` metrics, 2026-06-27; see the Corpus
+fundamental, identified by a live adoption census (GitHub `gh api` metrics, 2026-06-27; see the Suspec
 workspace `RESEARCH-most-used-skills`). **Tier: tool/artifact** — these are real shipping repos, but
 star/fork counts are an _interest and maintenance_ proxy, **not** install or usage telemetry; they ground
 *which technique is most-adopted*, never a MUST-level empirical claim. Every URL below was `gh api`-verified

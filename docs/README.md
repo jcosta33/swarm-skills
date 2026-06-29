@@ -7,7 +7,7 @@
 
 </div>
 
-> Skills are agent prompts. Like any prompt, they have measurable failure modes. This directory documents the empirical evidence that shaped the structural choices in this catalog and in the [Corpus starter kit's](https://github.com/jcosta33/corpus-starter-kit) guides — from the wording of a `description` field to the absence of any automation in the repo.
+> Skills are agent prompts. Like any prompt, they have measurable failure modes. This directory documents the empirical evidence that shaped the structural choices in this catalog and in the [Suspec starter kit's](https://github.com/jcosta33/suspec-starter-kit) guides — from the wording of a `description` field to the absence of any automation in the repo.
 
 Every choice in [`README.md`](../README.md), [`AGENTS.md`](../AGENTS.md), and the shipped skills traces to one of the documents below. If a contributor asks **"why is the description in this form?"**, **"why are there no scripts in this repo?"**, or **"why don't skills reference each other?"** — the answer is here, with a citation, not a hunch.
 

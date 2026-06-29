@@ -1,10 +1,10 @@
-# AGENTS.md — corpus-skills
+# AGENTS.md — suspec-skills
 
-This repo is the optional-skills catalog for the Corpus framework: self-contained
+This repo is the optional-skills catalog for the Suspec framework: self-contained
 agent guides in the Agent Skills format, one folder per skill under `skills/`,
 with the evidence behind their design under `docs/`. It is a derived-content
-repo — it carries no Corpus workspace install; the work of changing it is
-planned and reviewed in the family workspace (the sibling `corpus-works` repo).
+repo — it carries no Suspec workspace install; the work of changing it is
+planned and reviewed in the family workspace (the sibling `suspec-works` repo).
 
 ## Editing rules
 
@@ -30,8 +30,8 @@ The rationale and evidence for each rule live in `docs/` (the rule names its pag
   carries no dependency and needs no marker — the test is whether the skill
   still works when the named guide is absent. Kit templates and reference cards
   are referenced by their workspace-root-relative path (`advanced/audit.md`,
-  `templates/spec.md` — these resolve in any Corpus-kit workspace). Anything
-  else goes to the Corpus repo by name, never by relative path.
+  `templates/spec.md` — these resolve in any Suspec-kit workspace). Anything
+  else goes to the Suspec repo by name, never by relative path.
 - Skills name abstract command slots (`cmdTest`, `cmdLint`, `cmdValidate`, …) —
   never a concrete toolchain command; the consuming repo's `AGENTS.md` supplies
   those. An empty slot means ask.

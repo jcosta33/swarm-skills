@@ -69,7 +69,7 @@ The before/after illustrates each clause carrying its weight.
 description: Use when implementing a feature from a spec. Encodes the discipline — read the spec in full, survey existing patterns, halt on ambiguity, no scope creep, validate after every batch, paste verification output.
 ```
 
-**After** (~100 % activation; illustrative — the shipped `write-feature` description applies the same clauses to the Corpus task-packet workflow):
+**After** (~100 % activation; illustrative — the shipped `write-feature` description applies the same clauses to the Suspec task-packet workflow):
 
 ```yaml
 description: Implement a feature from a spec. ALWAYS apply this skill when the user asks to implement, build, or add a feature, when a spec doc is referenced, or when an acceptance criterion is named — even if the user does not name the spec explicitly. Do not start writing feature code directly without first surveying patterns, mapping criteria to steps, and halting on ambiguity. Skip this skill for bug-fix work against an existing implementation, behaviour-preserving refactors, or behaviour-changing rewrites of existing modules.
@@ -169,7 +169,7 @@ The two concerns compound: a vague always-match description is wrong by design; 
 | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Every description carries an explicit `Skip for …` exclusion clause                                                 | [`AGENTS.md`](../AGENTS.md) description rule + [Activation § The directive form](#the-directive-form)                                                |
 | No "core" / "loader" / "index" skill that all others depend on                                                      | [Scope § No "core" / "loader" / "index" skill](./scope.md#-no-core--loader--index-skill-that-other-skills-depend-on)                                 |
-| Each skill is independently installable; consumers install only what they use                                       | The `npx skills add jcosta33/corpus-skills --skill <name>` install path                                                                              |
+| Each skill is independently installable; consumers install only what they use                                       | The `npx skills add jcosta33/suspec-skills --skill <name>` install path                                                                              |
 | Persistent project context (commands, conventions, stack) lives in the consuming repo's `AGENTS.md`, not in a skill | [Self-containment § Rule 2 — project-specific values come from `AGENTS.md`](./self-containment.md#rule-2-project-specific-values-come-from-agentsmd) |
 
 > **Rule of thumb for catalogue authors.** If you find yourself writing _"this skill should always be loaded"_ in a PR description, the artefact you're shipping is `CLAUDE.md` / `AGENTS.md` content, not a skill. Move it there and close the PR.

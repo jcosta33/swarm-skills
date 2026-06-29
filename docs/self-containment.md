@@ -55,7 +55,7 @@ never inside a `SKILL.md` body.
 
 ## Cross-cutting stances: the canonical worked example
 
-The cross-cutting stances are where the self-containment principle does its loudest work. Each is a fully standalone skill — installing the starter kit's `review-output` guide does not pull in `adversarial-review`, and installing that skill does not require the guide. (The stances that map 1:1 to one kind of work — architect, auditor, researcher, documentarian — are not shipped standalone at all; they live folded into their kit work guide, their single source, per [ADR-0093](https://github.com/jcosta33/corpus/blob/main/docs/adrs/0093-collapse-1to1-personas.md). Self-containment is exactly why that fold is clean: the guide already carries the whole discipline, with nothing to import.)
+The cross-cutting stances are where the self-containment principle does its loudest work. Each is a fully standalone skill — installing the starter kit's `review-output` guide does not pull in `adversarial-review`, and installing that skill does not require the guide. (The stances that map 1:1 to one kind of work — architect, auditor, researcher, documentarian — are not shipped standalone at all; they live folded into their kit work guide, their single source, per [ADR-0093](https://github.com/jcosta33/suspec/blob/main/docs/adrs/0093-collapse-1to1-personas.md). Self-containment is exactly why that fold is clean: the guide already carries the whole discipline, with nothing to import.)
 
 ```mermaid
 flowchart TD
@@ -84,7 +84,7 @@ Skills are universal. The consuming repo holds project-specific values. Hardcodi
 
 The repo solves this with the `AGENTS.md` contract — a Commands table in the consuming repo's
 `AGENTS.md` mapping abstract slot names to real commands (the
-[Corpus starter kit](https://github.com/jcosta33/corpus-starter-kit/blob/main/AGENTS.md) ships
+[Suspec starter kit](https://github.com/jcosta33/suspec-starter-kit/blob/main/AGENTS.md) ships
 the template). Skills reference the slots by name and degrade gracefully when an entry is
 missing.
 

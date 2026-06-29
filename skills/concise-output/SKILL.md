@@ -59,5 +59,5 @@ against the people and tools that parse them, so write those normally.
 
 ## Pairs with
 
-Corpus ships a baseline output-economy convention; this skill is a self-contained, stronger dial that
-needs no Corpus knowledge to apply. (Pointer, not a dependency.)
+Suspec ships a baseline output-economy convention; this skill is a self-contained, stronger dial that
+needs no Suspec knowledge to apply. (Pointer, not a dependency.)

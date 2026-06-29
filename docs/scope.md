@@ -8,7 +8,7 @@ Most repos define themselves by what they contain. This one is also defined by w
 
 ## What this repo is
 
-`corpus-skills` ships **universal agent-workflow skills** — the 11 skills that hold for any repo regardless of the Corpus workflow ([ADR-0112](https://github.com/jcosta33/corpus/blob/main/docs/adrs/0112-two-tier-skills.md)). Each skill is a self-contained discipline that an agent loads when the task matches its description. The Corpus-coupled guides — the artifact builders (specs, audits, research, RFCs, change plans) and the `write-*` task-implementation depth (including `implement-task`) — ship installed in the [starter kit](https://github.com/jcosta33/corpus-starter-kit), not here.
+`suspec-skills` ships **universal agent-workflow skills** — the 11 skills that hold for any repo regardless of the Suspec workflow ([ADR-0112](https://github.com/jcosta33/suspec/blob/main/docs/adrs/0112-two-tier-skills.md)). Each skill is a self-contained discipline that an agent loads when the task matches its description. The Suspec-coupled guides — the artifact builders (specs, audits, research, RFCs, change plans) and the `write-*` task-implementation depth (including `implement-task`) — ship installed in the [starter kit](https://github.com/jcosta33/suspec-starter-kit), not here.
 
 | Domain                     | Shape of skills shipped                                                                                                                                                |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

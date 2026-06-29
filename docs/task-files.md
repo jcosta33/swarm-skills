@@ -155,7 +155,7 @@ The kit's code-authoring skills (the `write-*` family) each ship a `references/t
 | **Plan + state + gates (M·P·S·G ≈ 5/6)** — multi-session, multi-stage, state separate, paste-output gates; no formal hypothesis tracking                                            | `write-feature`, `write-refactor`, `write-rewrite`, `write-migration`, `write-testing`, `write-performance` | The same scope / progress / evidence scaffold without a multi-row tracker; `write-performance` carries a single `## Hypothesis` field                                         |
 | **Authorial — plan + decisions, light gates (≈ 3–4/6)** — multi-stage authoring with state separate from the final document, but the deliverable itself is the proof of correctness | `write-documentation`                                                                                       | Plan + decisions + findings + self-review; lighter paste-output gates (the verified examples are the proof)                                                                   |
 
-The [Corpus starter kit's](https://github.com/jcosta33/corpus-starter-kit) authoring guides (`write-spec`, `write-audit`, `write-research`, `write-bug-report`, …) sit in the same authorial band, but in the Corpus workflow their working state lives in the task packet itself, so they ship no separate template. The catalog's `adversarial-review` is the one discipline-skill that warrants a session frame — it ships a framework-free `references/review-notes.md`.
+The [Suspec starter kit's](https://github.com/jcosta33/suspec-starter-kit) authoring guides (`write-spec`, `write-audit`, `write-research`, `write-bug-report`, …) sit in the same authorial band, but in the Suspec workflow their working state lives in the task packet itself, so they ship no separate template. The catalog's `adversarial-review` is the one discipline-skill that warrants a session frame — it ships a framework-free `references/review-notes.md`.
 
 ### Skills that deliberately ship none
 
@@ -165,7 +165,7 @@ The rubric exempts two structural categories: persona skills and cross-cutting q
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | All `persona-*` skills | Single-load mindset conditioning, not a workflow. The persona scopes _how_ the agent thinks during whichever workflow it accompanies; the working state belongs to the workflow's task file, not the persona's.     |
 | `empirical-proof`      | A cross-cutting quality gate whose discipline lives entirely in `SKILL.md` and surfaces inside whichever workflow's task file is in play (`## Self-review`). No scaffold of its own.                                |
-| `implement-task`       | The Corpus task packet **is** the working state — the guide fills the packet's own sections rather than shadowing it with a second file. If the deliverable and the working state are the same document, ship none. |
+| `implement-task`       | The Suspec task packet **is** the working state — the guide fills the packet's own sections rather than shadowing it with a second file. If the deliverable and the working state are the same document, ship none. |
 
 ---
 

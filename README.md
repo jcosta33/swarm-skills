@@ -1,10 +1,10 @@
-# corpus-skills
+# suspec-skills
 
-> The optional skills catalog for [Corpus](https://github.com/jcosta33/corpus) — conditioning stances, code-lifecycle disciplines, and review/output style in the open Agent Skills format, installable into any agent CLI.
+> The optional skills catalog for [Suspec](https://github.com/jcosta33/suspec) — conditioning stances, code-lifecycle disciplines, and review/output style in the open Agent Skills format, installable into any agent CLI.
 
 Each skill is a self-contained folder under [`skills/`](./skills/): one `SKILL.md` with a trigger description and the working rules, plus bundled `references/` where a skill ships a fillable session frame. No scripts, no runtime — markdown an agent loads when the work matches.
 
-The [Corpus starter kit](https://github.com/jcosta33/corpus-starter-kit) ships every Corpus-coupled skill — the core loop (`write-spec`, `implement-task`, `review-output`), the workspace authoring guides (`write-audit`, `write-research`, `write-rfc`, `write-prd`, `write-bug-report`, `write-change-plan`, `write-inventory`, `spec-check`, `split-work`, `save-findings`), and the task-implementation depth (`write-feature`, `write-fix`, `write-refactor`, `write-rewrite`, `write-migration`, `write-performance`, `write-testing`, `write-documentation`). Everything **here** is the universal layer — stances, disciplines, review style, output economy — framework-free and installable in any repo; install only what your work calls for.
+The [Suspec starter kit](https://github.com/jcosta33/suspec-starter-kit) ships every Suspec-coupled skill — the core loop (`write-spec`, `implement-task`, `review-output`), the workspace authoring guides (`write-audit`, `write-research`, `write-rfc`, `write-prd`, `write-bug-report`, `write-change-plan`, `write-inventory`, `spec-check`, `split-work`, `save-findings`), and the task-implementation depth (`write-feature`, `write-fix`, `write-refactor`, `write-rewrite`, `write-migration`, `write-performance`, `write-testing`, `write-documentation`). Everything **here** is the universal layer — stances, disciplines, review style, output economy — framework-free and installable in any repo; install only what your work calls for.
 
 ## Install
 
@@ -12,29 +12,29 @@ With the [Vercel skills CLI](https://github.com/vercel-labs/skills) (works with 
 
 ```bash
 # list what's available
-npx skills add jcosta33/corpus-skills --list
+npx skills add jcosta33/suspec-skills --list
 
 # install one skill into the current repo
-npx skills add jcosta33/corpus-skills --skill adversarial-review
+npx skills add jcosta33/suspec-skills --skill adversarial-review
 
 # install globally, or for a specific agent
-npx skills add jcosta33/corpus-skills --skill adversarial-review -g
-npx skills add jcosta33/corpus-skills --skill adversarial-review -a claude-code
+npx skills add jcosta33/suspec-skills --skill adversarial-review -g
+npx skills add jcosta33/suspec-skills --skill adversarial-review -a claude-code
 ```
 
 No CLI? Copy the folder: `cp -R skills/adversarial-review <your-repo>/.agents/skills/` (point your tool's skills directory at the same folder — e.g. a `.claude/skills` symlink).
 
 Pin to a tag or commit for stability and re-run to re-fetch. The catalog is
 [semver](https://semver.org)-versioned ([`VERSION`](./VERSION), [`CHANGELOG.md`](./CHANGELOG.md));
-watch the [releases](https://github.com/jcosta33/corpus-skills/releases) and re-pull when a bump matters.
+watch the [releases](https://github.com/jcosta33/suspec-skills/releases) and re-pull when a bump matters.
 
 ## The AGENTS.md contract
 
-Skills name abstract command slots — `cmdTest`, `cmdLint`, `cmdTypecheck`, `cmdValidate` — never concrete commands. The consuming repo's `AGENTS.md` Commands table supplies the implementations. That split is what makes a skill portable: the guide carries the discipline, your repo carries the toolchain. An empty slot means **ask** — a skill never invents a command. The [Corpus starter kit](https://github.com/jcosta33/corpus-starter-kit) sets this contract up for you.
+Skills name abstract command slots — `cmdTest`, `cmdLint`, `cmdTypecheck`, `cmdValidate` — never concrete commands. The consuming repo's `AGENTS.md` Commands table supplies the implementations. That split is what makes a skill portable: the guide carries the discipline, your repo carries the toolchain. An empty slot means **ask** — a skill never invents a command. The [Suspec starter kit](https://github.com/jcosta33/suspec-starter-kit) sets this contract up for you.
 
 ## Where to start
 
-You don't need any of these to run Corpus — the [starter kit](https://github.com/jcosta33/corpus-starter-kit)
+You don't need any of these to run Suspec — the [starter kit](https://github.com/jcosta33/suspec-starter-kit)
 already ships the core loop. Add skills only as a specific need shows up, in roughly this order:
 
 1. **Nothing.** Run the loop with the kit's core guides. Most changes never need more.
@@ -56,9 +56,9 @@ Rule of thumb: install the fewest skills that name the discipline your current t
 
 ## Catalog
 
-Everything here is **universal** — framework-free, installable into any repo with zero Corpus knowledge.
-Corpus-coupled skills (the artifact builders + the `write-*` task-implementation depth) live in the
-[starter kit](https://github.com/jcosta33/corpus-starter-kit) instead, not here.
+Everything here is **universal** — framework-free, installable into any repo with zero Suspec knowledge.
+Suspec-coupled skills (the artifact builders + the `write-*` task-implementation depth) live in the
+[starter kit](https://github.com/jcosta33/suspec-starter-kit) instead, not here.
 
 ### Stances
 
@@ -102,6 +102,6 @@ The fundamental coding skills, re-baselined from a live adoption census ([best-o
 
 Read a skill before installing it — a skill is instructions your agent will follow. Everything here is plain markdown: no scripts, no network calls, no executables. Pin to a commit if you need a stable install.
 
-## Relationship to the Corpus framework
+## Relationship to the Suspec framework
 
-These skills assume nothing about Corpus — each stands alone in any repo with an `AGENTS.md`. They pair naturally with the Corpus working discipline (specs with verifiable requirements, task packets with evidence-backed claims, review packets as the durable record); the framework and its docs live at [jcosta33/corpus](https://github.com/jcosta33/corpus), the copy-whole workspace at [jcosta33/corpus-starter-kit](https://github.com/jcosta33/corpus-starter-kit). Its sibling catalog [jcosta33/corpus-agents](https://github.com/jcosta33/corpus-agents) ships Claude-Code-first worker definitions for the Corpus roles — agent-neutral disciplines here, runner-specific agents there. This catalog is curated: skill content is edited here, and changes are planned and reviewed in the Corpus project's workspace.
+These skills assume nothing about Suspec — each stands alone in any repo with an `AGENTS.md`. They pair naturally with the Suspec working discipline (specs with verifiable requirements, task packets with evidence-backed claims, review packets as the durable record); the framework and its docs live at [jcosta33/suspec](https://github.com/jcosta33/suspec), the copy-whole workspace at [jcosta33/suspec-starter-kit](https://github.com/jcosta33/suspec-starter-kit). Its sibling catalog [jcosta33/suspec-agents](https://github.com/jcosta33/suspec-agents) ships Claude-Code-first worker definitions for the Suspec roles — agent-neutral disciplines here, runner-specific agents there. This catalog is curated: skill content is edited here, and changes are planned and reviewed in the Suspec project's workspace.
