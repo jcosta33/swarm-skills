@@ -6,7 +6,7 @@ description: >-
   surface the unstated assumptions, steelman the discarded alternative, and
   ground every challenge in external evidence rather than intrinsic
   second-guessing. ALWAYS apply when weighing a proposal, a design or proposal
-  direction, a design, or a decision that is not yet built, or when asked to challenge,
+  direction, or a decision that is not yet built, or when asked to challenge,
   stress-test, or play devil's advocate. Never soften the challenge to be
   agreeable, manufacture a flaw the evidence does not support, or rewrite the
   proposal here. Skip judging finished work or a change set — reviewing a

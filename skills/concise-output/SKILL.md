@@ -57,7 +57,7 @@ against the people and tools that parse them, so write those normally.
   not a win.
 - Compressing code, commits, or PR descriptions — those have their own conventions; write them normally.
 
-## See also
+## Pairs with
 
 Corpus ships a baseline output-economy convention; this skill is a self-contained, stronger dial that
 needs no Corpus knowledge to apply. (Pointer, not a dependency.)

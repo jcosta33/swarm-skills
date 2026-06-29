@@ -49,9 +49,9 @@ flowchart LR
     C1 --> D1["skills/*/SKILL.md frontmatter"]
     C2 --> D2["skills/*/SKILL.md body"]
     C3 --> D2
-    C4 --> D3["empirical-proof, write-testing, write-fix"]
+    C4 --> D3["empirical-proof, fix-flaky-test"]
     C5 --> D4["no cross-skill links + AGENTS.md contract"]
-    C6 --> D5["skills/*/references/task-template.md"]
+    C6 --> D5["task-template.md (starter kit)"]
 ```
 
 Each principle has a dedicated document in this directory; the [Sources](./sources.md) page lists the primary evidence behind every link in the chain.

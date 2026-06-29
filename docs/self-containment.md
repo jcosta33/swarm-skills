@@ -72,7 +72,7 @@ flowchart TD
 | **Each stance is a separate skill folder**                                   | `skills/persona-challenger/SKILL.md`, `skills/persona-surveyor/SKILL.md` — one folder per cross-cutting stance, each self-contained (the former `persona-skeptic` folded into the `adversarial-review` discipline).  |
 | **Each stance activates from task assessment, not from cross-skill mention** | Each `description` names the task type the stance is for, e.g. _"ALWAYS apply when weighing a proposal before it's built"_. The agent loads it because the task matches, not because another skill mentioned it. |
 | **No stance index / core / loader skill**                                    | There is no `personas-core`, no `personas` monolith. Each is independently installable.                                                                                                                       |
-| **Stances are not referenced from any other skill**                          | `Grep` over `skills/` for `persona-` returns zero hits inside non-stance `SKILL.md` files and zero hits inside any `references/task-template.md`. The only matches are within the stance files themselves.    |
+| **Stances are not referenced from any other skill**                          | `Grep` over `skills/` for `persona-` returns no cross-skill dependency: the only non-stance hits are in `adversarial-review/SKILL.md`, documenting that it absorbed the retired `persona-skeptic` stance — not loading it. Every other match is within a stance file itself.    |
 
 > A consumer who installs only the kit's `review-output` and this catalog's `adversarial-review` gets the same behaviour as one with everything installed — neither file mentions the other.
 

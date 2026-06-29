@@ -44,7 +44,7 @@ Skip this skill for <out-of-scope task type 1> or <out-of-scope task type 2>.
 
 ### The compliance ceiling: brevity is structural
 
-Description length isn't only about token cost — it's about _compliance_. The ETH Zurich `AGENTS.md` study [\[32\]](./sources.md#32) measured what happens when context files balloon: LLM-generated `AGENTS.md` files cost **+20 %** in tokens while _reducing_ task-success rate by **3 %**. Tool-specific imperatives, by contrast, were the highest-value content — agents called explicit tools **2.5 times when mentioned vs 0.05 times when not** (~50× lift).
+Description length isn't only about token cost — it's about _compliance_. The ETH Zurich `AGENTS.md` study [\[32\]](./sources.md#32) measured what happens when context files balloon: LLM-generated `AGENTS.md` files cost **+20 %** in tokens while _reducing_ task-success rate by **3 %** — terse, directive content was the highest-value kind ([\[32\]](./sources.md#32), the ~50× tool-mention lift).
 
 The same shape applies to descriptions. A description that names three concrete triggers is more reliably acted on than one that lists ten — joint instruction-following falls off multiplicatively as instructions multiply ([\[36\]](./sources.md#36) Harada et al., _Curse of Instructions_, ICLR 2025: at ten simultaneous instructions a frontier model satisfies all of them only ~15 % of the time). The 350–600-character target is the empirical sweet spot: long enough to carry the four required clauses, short enough that every clause earns its place.
 
@@ -54,6 +54,8 @@ The same shape applies to descriptions. A description that names three concrete 
 | 350–600 chars   | Four clauses fit cleanly; 100 % activation across the [\[3\]](./sources.md#3) trial conditions |
 | 600–800 chars   | Workable but past the sweet spot — every clause must justify itself; trim before adding        |
 | Above 800 chars | Compliance ceiling [\[32\]](./sources.md#32); the description starts working against itself    |
+
+The 800-char line is this repo's forcing target, not the spec limit (1024 [\[1\]](./sources.md#1)). All but one shipped description sit under it; the single exception is [`adversarial-review`](../skills/adversarial-review/SKILL.md) at 981 chars — spec-legal, but past the target because it carries both the refute-by-default posture and the absorbed `persona-skeptic` triggers. It is the explicit exception, not a silent one.
 
 ---
 
@@ -157,7 +159,7 @@ A "skill" that's authored to always be in context is not a skill — it's `CLAUD
 
 ### A second concern, distinct from the design anti-pattern
 
-Even **well-designed** skills currently get loaded eagerly by Claude Code: [\[34\]](./sources.md#34) issue #44371 demonstrates that the harness reads every installed `SKILL.md` body at startup, not just the frontmatter. 28 skills → 4-minute cold start, with non-linear scaling per skill. This is a **harness bug**, not a skill-design pattern, but it amplifies the cost of broad descriptions. [\[35\]](./sources.md#35) BSWEN's measurements give a practitioner rule of thumb: **15 skills optimal · 25 acceptable · 30 warning · 45+ problem**.
+Even **well-designed** skills currently get loaded eagerly by Claude Code: [\[34\]](./sources.md#34) issue #44371 demonstrates that the harness reads every installed `SKILL.md` body at startup, not just the frontmatter. 28 skills → 4-minute cold start, with non-linear scaling per skill. This is a **harness bug**, not a skill-design pattern, but it amplifies the cost of broad descriptions. [\[35\]](./sources.md#35) BSWEN's measurements give a practitioner rule of thumb: **15 skills optimal · 20 good · 25 acceptable · 30 warning · 45+ problem**.
 
 The two concerns compound: a vague always-match description is wrong by design; the eager-load bug means even disciplined descriptions cost ~100 tokens each at session start. **Selective install is the only defence the consumer has against the second concern**, and it's the canonical defence against the first.
 

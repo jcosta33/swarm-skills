@@ -104,12 +104,11 @@ Out of scope: any skill whose description matches every task
 flowchart LR
     P[The skill must be useful in any consumer repo, by itself, with no implicit dependencies.]
     P --> E1[No engineering-domain prescriptions]
-    P --> E2[No stack flavour]
-    P --> E3[No vendor lock-in]
-    P --> E4[No internal product knowledge]
-    P --> E5[No automation in this repo]
-    P --> E6[No core/loader skills]
-    P --> E7[No skills designed to 'always load']
+    P --> E2[No stack or vendor lock-in]
+    P --> E3[No internal product knowledge]
+    P --> E4[No automation in this repo]
+    P --> E5[No core/loader skills]
+    P --> E6[No skills designed to 'always load']
 ```
 
 Every exclusion above is a corollary of one principle: **a skill must be useful in any consumer repo, by itself, with no implicit dependencies on other skills, on this repo's tooling, or on a particular stack.**
